@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global spacing for all main content pages */
+.main-content {
+  padding-top: 50px; /* Space between header and content */
+  min-height: calc(100vh - 50px);
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 45px;
+  }
+} 

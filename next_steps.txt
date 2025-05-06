@@ -1,0 +1,18 @@
+Based on what's been implemented so far (authentication system, role-based navigation, profile page), the immediate next steps should focus on the core functionality of the platform:
+Course Management System:
+Create course listing/discovery page that displays available courses
+Implement course detail view with enrollment options
+Build course creation interface for instructors
+Dashboard Development:
+Complete student dashboard showing enrolled courses and progress
+Finish instructor dashboard with course management tools
+API Integration:
+Implement the remaining API endpoints for courses:
+GET /api/courses (listing)
+GET /api/courses/{id} (details)
+POST /api/courses (creation for instructors)
+GET /api/enrollments/user/{userId} (student enrollments)
+Content Management:
+Create components for displaying course materials
+Build the content upload tools for instructors
+Start with a simple course card component that can be reused across the platform, then build the course listing page. This establishes the foundation for enrollment features and content delivery which are core to the platform's functionality.
