@@ -204,4 +204,4 @@
 
 ---
 
-Developed as part of a learning project. For questions or support, contact the development team.
+Developed as part of a learning project by Mudar Pranav, Mohul Y P, M K Vishwaas, Manas Shetty. For questions or support, contact the development team.
