@@ -10,11 +10,13 @@
 ### Backend Setup
 
 1. Create a PostgreSQL database:
+
    ```sql
    CREATE DATABASE elearning;
    ```
 
 2. Configure database connection in `backend/src/main/resources/application.properties`:
+
    ```properties
    spring.datasource.url=jdbc:postgresql://localhost:5432/elearning
    spring.datasource.username=your_username
@@ -30,6 +32,7 @@
 ### Frontend Setup
 
 1. Navigate to the frontend directory:
+
    ```bash
    cd frontend
    ```
@@ -81,6 +84,7 @@
 ### Authentication
 
 - `POST /api/auth/signup`: Register a new user
+
   ```json
   {
     "username": "user123",
@@ -107,20 +111,20 @@
 
 ### Users Table
 
-| Column    | Type         | Description                 |
-|-----------|--------------|---------------------------- |
-| id        | BIGINT       | Primary key                 |
-| username  | VARCHAR(255) | Unique username             |
-| email     | VARCHAR(255) | Unique email                |
-| password  | VARCHAR(255) | Encrypted password          |
-| full_name | VARCHAR(255) | User's full name            |
-| enabled   | BOOLEAN      | Account status              |
+| Column    | Type         | Description        |
+| --------- | ------------ | ------------------ |
+| id        | BIGINT       | Primary key        |
+| username  | VARCHAR(255) | Unique username    |
+| email     | VARCHAR(255) | Unique email       |
+| password  | VARCHAR(255) | Encrypted password |
+| full_name | VARCHAR(255) | User's full name   |
+| enabled   | BOOLEAN      | Account status     |
 
 ### User_Roles Table
 
-| Column  | Type         | Description                              |
-|---------|--------------|----------------------------------------- |
-| user_id | BIGINT       | Foreign key reference to Users table     |
+| Column  | Type         | Description                             |
+| ------- | ------------ | --------------------------------------- |
+| user_id | BIGINT       | Foreign key reference to Users table    |
 | role    | VARCHAR(255) | Role (ROLE_STUDENT, ROLE_INSTRUCTOR...) |
 
 ## Troubleshooting
@@ -128,20 +132,24 @@
 ### Common Issues
 
 1. **Database Connection Error**:
+
    - Verify PostgreSQL is running
    - Check database credentials in application.properties
    - Ensure the database exists
 
 2. **Backend Not Starting**:
+
    - Check console for specific error messages
    - Verify port 8080 is not in use
 
 3. **Frontend Not Starting**:
+
    - Verify Node.js is installed
    - Check for errors in the npm install process
    - Ensure port 3000 is not in use
 
 4. **Authentication Issues**:
+
    - Verify JWT configuration
    - Check security filter chain configuration
    - Ensure correct endpoints are being permitted
@@ -154,21 +162,25 @@
 ## Future Enhancements
 
 1. **Course Management**:
+
    - Course creation and editing
    - Content organization
    - Enrollment management
 
 2. **Learning Content**:
+
    - Video lectures
    - Interactive quizzes
    - Assignments
 
 3. **User Interaction**:
+
    - Discussion forums
    - Live chat
    - Peer review
 
 4. **Analytics**:
+
    - Learning progress tracking
    - Course analytics
    - Performance insights
@@ -176,6 +188,19 @@
 5. **Mobile Support**:
    - Responsive design
    - Mobile app integration
+
+## Screenshots
+
+### Frontend Dashboards
+
+- **Admin Dashboard**
+  ![Admin Dashboard](ssfrontend/admiDashboard.jpg)
+
+- **Instructor Dashboard**
+  ![Instructor Dashboard](ssfrontend/instructorDashboard.jpg)
+
+- **Student Dashboard**
+  ![Student Dashboard](ssfrontend/courses.jpg)
 
 ---
 
