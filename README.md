@@ -1,3 +1,13 @@
+# E-Learning Platform
+
+A full-stack e-learning platform where **students** browse and enrol in courses, work through chapters and quizzes, and track progress; **instructors** create and manage courses, chapters, quizzes and mentoring sessions; and **admins** oversee users and content. Role-based access is enforced with JWT authentication.
+
+| Layer | Technology |
+|---|---|
+| Frontend | React |
+| Backend | Java, Spring Boot, Spring Security (JWT) |
+| Database | PostgreSQL (Flyway migrations) |
+
 ## Setup Instructions
 
 ### Prerequisites
@@ -15,12 +25,13 @@
    CREATE DATABASE elearning;
    ```
 
-2. Configure database connection in `backend/src/main/resources/application.properties`:
+2. Set the required environment variables (see `.env.example`):
 
-   ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/elearning
-   spring.datasource.username=your_username
-   spring.datasource.password=your_password
+   ```bash
+   export DB_URL=jdbc:postgresql://localhost:5432/elearning
+   export DB_USERNAME=postgres
+   export DB_PASSWORD=your_password
+   export JWT_SECRET=$(openssl rand -base64 64)
    ```
 
 3. Navigate to the backend directory and build the project:
@@ -134,7 +145,7 @@
 1. **Database Connection Error**:
 
    - Verify PostgreSQL is running
-   - Check database credentials in application.properties
+   - Check the `DB_*` environment variables
    - Ensure the database exists
 
 2. **Backend Not Starting**:
